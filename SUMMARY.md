@@ -11,3 +11,4 @@
 
 * [Delegated Schnorr](advanced/delegated-schnorr.md)
 * [Field simulation](advanced/field-simulation.md)
+* [TurboPlonk](advanced/turboplonk.md)
