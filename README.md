@@ -1,6 +1,14 @@
 # Overview
 
-#### Bulletproofs
+#### Schnorr's protocol
+
+Schnorr's protocol is a zero-knowledge protocol that allows a Prover to prove that he knows the discrete logarithm between two group elements. It is instantiated with groups such as elliptic curve groups where the discrete logarithm problem is believed to be hard.
+
+Given commitments to pairs representing asset-types and amounts, this protocol can be used to prove that two commitments are to the same asset-type. With minor modifications, the protocol can also be used to prove that the commitments are to distinct asset types if necessary.
+
+For a detailed explanation of the delegated Schnorr protocol, [check this page](advanced/delegated-schnorr.md)
+
+**Bulletproofs**
 
 The range proofs are derived from a zero-knowledge proof scheme called _Bulletproofs_. This is an instantiation of a special class of range proofs where the sender proves in zero-knowledge (i.e. without revealing any other information about the transaction) that the masked (or committed) amount falls within a certain range. In particular, a sender can use this scheme to prove that the amount he sent is non-negative and does not exceed his balance, which is necessary to prevent double-spending on the chain. This is a _transparent_ scheme, meaning it does not require any preprocessing phase or trusted setup. The security of Bulletproofs relies on the hardness of the discrete logarithm problem in elliptic curves, which is one of the oldest and most battle-tested assumptions in cryptography.
 
